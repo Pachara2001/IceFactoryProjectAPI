@@ -1,5 +1,8 @@
 package IceFactory.model;
 
+import com.fasterxml.jackson.annotation.JsonBackReference;
+import org.springframework.data.annotation.Transient;
+
 import javax.persistence.*;
 import java.time.LocalDateTime;
 
@@ -8,11 +11,12 @@ public class Staff extends Account {
 
     private String firstName;
     private String lastName;
-    private LocalDateTime dateTime;
+    private String dateTime;
     private String phoneNumber;
     private String address;
 
-    @ManyToOne(fetch = FetchType.LAZY)
+//    @JsonBackReference
+    @ManyToOne
     private Owner owner;
 
 
@@ -20,17 +24,13 @@ public class Staff extends Account {
     //editOrder
 
 
-    public Owner getOwner() {
-        return owner;
-    }
-
     public void setOwner(Owner owner) {
         this.owner = owner;
     }
 
-    public void checkIn(){
-        dateTime = LocalDateTime.now();
-    }
+//    public void checkIn(){
+//        dateTime = LocalDateTime.now();
+//    }
 
 //    public Staff logIn(String username,String password){
 //        try {
@@ -61,11 +61,11 @@ public class Staff extends Account {
         this.lastName = lastName;
     }
 
-    public LocalDateTime getDateTime() {
+    public String getDateTime() {
         return dateTime;
     }
 
-    public void setDateTime(LocalDateTime dateTime) {
+    public void setDateTime(String dateTime) {
         this.dateTime = dateTime;
     }
 

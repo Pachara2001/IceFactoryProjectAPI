@@ -32,17 +32,17 @@ public class StaffService {
         Staff record = repository.findById(username).get();
         if(requestBody.getPassword()!=null){
             record.setPassword(requestBody.getPassword());}
-        else if(requestBody.getFirstName()!=null){
+        if(requestBody.getFirstName()!=null){
             record.setFirstName(requestBody.getFirstName()); }
-        else if(requestBody.getLastName()!=null){
+        if(requestBody.getLastName()!=null){
             record.setLastName(requestBody.getLastName()); }
-        else if(requestBody.getDateTime()!=null){
-            record.setDateTime(requestBody.getDateTime());}
-        else if(requestBody.getAddress()!=null){
+        if(requestBody.getAddress()!=null){
             record.setAddress(requestBody.getAddress()); }
-        else if(requestBody.getPhoneNumber()!=null){
+        if(requestBody.getPhoneNumber()!=null){
             record.setPhoneNumber(requestBody.getPhoneNumber()); }
-        else throw new IllegalArgumentException("Argument is null!!");
+        if(requestBody.getDateTime()!=null){
+            record.setDateTime(requestBody.getDateTime());
+        }
         repository.saveAndFlush(record);
         return record;
     }

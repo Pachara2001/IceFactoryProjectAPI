@@ -25,11 +25,11 @@ public class Account {
         this.password = password;
     }
 
-    public boolean entryCheck(String username,String password){
-        if(this.username.equals(username)) {
-            if(this.password.equals(password)) return true;
-            else throw new IllegalArgumentException("Wrong password.");
-        }
-        throw new IllegalArgumentException("We don't have this username in the database.");
-    }
+//    public boolean entryCheck(String username,String password){
+//        if(this.username.equals(username)) {
+//            if(this.password.equals(password)) return true;
+//            else throw new IllegalArgumentException("Wrong password.");
+//        }
+//        throw new IllegalArgumentException("We don't have this username in the database.");
+//    }
 }
