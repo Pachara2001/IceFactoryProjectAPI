@@ -15,7 +15,7 @@ public class Staff extends Account {
     private String phoneNumber;
     private String address;
 
-//    @JsonBackReference
+
     @ManyToOne
     private Owner owner;
 
@@ -28,22 +28,7 @@ public class Staff extends Account {
         this.owner = owner;
     }
 
-//    public void checkIn(){
-//        dateTime = LocalDateTime.now();
-//    }
-
-//    public Staff logIn(String username,String password){
-//        try {
-//            if(entryCheck(username,password)){
-//                checkIn();
-//                return this;}
-//        }
-//        catch (IllegalArgumentException e){
-//            throw new IllegalArgumentException(e.getMessage());
-//        }
-//        return null;
-//        }
-
+   
 
     public String getFirstName() {
         return firstName;

@@ -17,8 +17,6 @@ public class StaffService {
         return repository.findAll();
     }
 
-
-
     public Staff create(Staff staff){
         repository.save(staff);
         return staff;
