@@ -2,24 +2,30 @@ package IceFactory.model;
 
 import org.hibernate.annotations.Type;
 
-import javax.persistence.Column;
-import javax.persistence.GeneratedValue;
-import javax.persistence.Id;
-import javax.persistence.Entity;
+import javax.persistence.*;
+import java.util.HashSet;
+import java.util.Set;
 import java.util.UUID;
 
 @Entity
 public class Customer {
+    enum CustomerType{
+        Delivery,Pickup
+    }
+
     @Id
     @GeneratedValue(generator = "UUID")
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
     private UUID customerId;
-
     private String fName;
     private String lName;
     private String address;
     private String phoneNumber;
+    private String type;
+
+    @OneToMany(mappedBy = "customer")
+    private Set<CustomerOrder> customerOrders = new HashSet<>();
 
     public UUID getCustomerId() {
         return customerId;
@@ -60,4 +66,22 @@ public class Customer {
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
+
+    public String getType() {
+        return type;
+    }
+
+    public void setType(String type) {
+        this.type = type;
+    }
+
+    public Set<CustomerOrder> getOrders() {
+        return customerOrders;
+    }
+
+    public void setOrders(Set<CustomerOrder> customerOrders) {
+        this.customerOrders = customerOrders;
+    }
+
+
 }

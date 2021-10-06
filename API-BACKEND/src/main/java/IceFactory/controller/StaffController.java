@@ -28,7 +28,6 @@ public class StaffController {
         return service.getStaff(username);
     }
 
-
     @PutMapping("/{username}")
     public Staff update(@PathVariable String username,
                         @RequestBody Staff staff) {

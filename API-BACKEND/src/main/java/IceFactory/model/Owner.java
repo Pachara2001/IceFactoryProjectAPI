@@ -15,7 +15,6 @@ public class Owner extends Account{
     @OneToMany(mappedBy = "owner")
     private  Set<Staff> staffs = new HashSet<>();
 
-
     public Set<Staff> getStaffs() {
         return staffs;
     }
