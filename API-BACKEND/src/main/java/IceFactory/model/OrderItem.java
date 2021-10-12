@@ -17,10 +17,17 @@ public class OrderItem {
     private Product product;
     private int orderQuantity;
     private float price;
-    private float priceDelivery;
+    private String pName;
     @ManyToOne
     private CustomerOrder customerOrder;
 
+    public String getpName() {
+        return pName;
+    }
+
+    public void setpName(String pName) {
+        this.pName = pName;
+    }
 
     public UUID getOrderItemId() {
         return orderItemId;
@@ -50,13 +57,7 @@ public class OrderItem {
         this.price = price;
     }
 
-    public float getPriceDelivery() {
-        return priceDelivery;
-    }
 
-    public void setPriceDelivery(float priceDelivery) {
-        this.priceDelivery = priceDelivery;
-    }
 
     public void setOrder(CustomerOrder customerOrder) {
         this.customerOrder = customerOrder;
