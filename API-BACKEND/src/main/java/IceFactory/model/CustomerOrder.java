@@ -7,7 +7,7 @@ import java.util.*;
 
 @Entity
 public class CustomerOrder {
-    enum Status{
+    public enum Status{
         PrepareProduct,
         WaitForDelivery,
         CloseOrder

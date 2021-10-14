@@ -9,7 +9,7 @@ import java.util.UUID;
 
 @Entity
 public class Customer {
-    enum CustomerType{
+    public enum CustomerType{
         Delivery,Pickup
     }
 
