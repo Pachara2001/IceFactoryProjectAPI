@@ -2,7 +2,7 @@
 /shelf/
 /workspace.xml
 # Datasource local storage ignored files
-/../../../../../:\work\SA\IceFactoryProjectAPI\.idea/dataSources/
+/../../../../../../:\work\SA\IceFactoryProject\API-BACKEND\.idea/dataSources/
 /dataSources.local.xml
 # Editor-based HTTP Client requests
 /httpRequests/

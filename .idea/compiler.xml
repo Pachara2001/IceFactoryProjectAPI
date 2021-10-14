@@ -7,14 +7,13 @@
         <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
         <outputRelativeToContentRoot value="true" />
         <module name="IceFactory" />
+        <module name="API-BACKEND" />
       </profile>
     </annotationProcessing>
-    <bytecodeTargetLevel>
-      <module name="IceFactory" target="1.8" />
-    </bytecodeTargetLevel>
   </component>
   <component name="JavacSettings">
     <option name="ADDITIONAL_OPTIONS_OVERRIDE">
+      <module name="API-BACKEND" options="-parameters" />
       <module name="IceFactory" options="-parameters" />
     </option>
   </component>
