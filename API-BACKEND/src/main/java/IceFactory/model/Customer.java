@@ -18,8 +18,7 @@ public class Customer {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
     private UUID customerId;
-    private String fName;
-    private String lName;
+    private String name;
     private String address;
     private String phoneNumber;
     private String type;
@@ -35,20 +34,12 @@ public class Customer {
         this.customerId = customerId;
     }
 
-    public String getfName() {
-        return fName;
+    public String getName() {
+        return name;
     }
 
-    public void setfName(String fName) {
-        this.fName = fName;
-    }
-
-    public String getlName() {
-        return lName;
-    }
-
-    public void setlName(String lName) {
-        this.lName = lName;
+    public void setName(String name) {
+        this.name = name;
     }
 
     public String getAddress() {

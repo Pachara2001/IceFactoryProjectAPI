@@ -32,10 +32,8 @@ public class CustomerService {
         Customer record = repository.findById(customerId).get();
         if(requestBody.getAddress()!=null)
             record.setAddress(requestBody.getAddress());
-        if(requestBody.getfName()!=null)
-            record.setfName(requestBody.getfName());
-        if(requestBody.getlName()!=null)
-            record.setlName(requestBody.getlName());
+        if(requestBody.getName()!=null)
+            record.setName(requestBody.getName());
         if(requestBody.getPhoneNumber()!=null)
             record.setPhoneNumber(requestBody.getPhoneNumber());
 
