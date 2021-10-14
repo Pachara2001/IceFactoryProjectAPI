@@ -28,5 +28,5 @@ public class ProductController {
     }
 
     @DeleteMapping("/{name}")
-    public Product delete(@PathVariable String name) {return service.delete(name);}
+    public void delete(@PathVariable String name) { service.delete(name);}
 }

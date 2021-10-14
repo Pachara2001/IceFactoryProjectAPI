@@ -41,9 +41,8 @@ public class CustomerService {
         return record;
     }
 
-    public Customer delete(UUID customerId) {
+    public void delete(UUID customerId) {
         Customer record = repository.findById(customerId).get();
         repository.deleteById(customerId);
-        return record;
     }
 }

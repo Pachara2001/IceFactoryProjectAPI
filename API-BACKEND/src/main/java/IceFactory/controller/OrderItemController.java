@@ -26,5 +26,5 @@ public class OrderItemController {
     }
 
     @DeleteMapping("/{orderItemId}")
-    public OrderItem delete(@PathVariable UUID orderItemId){ return service.delete(orderItemId);}
+    public void delete(@PathVariable UUID orderItemId){  service.delete(orderItemId);}
 }

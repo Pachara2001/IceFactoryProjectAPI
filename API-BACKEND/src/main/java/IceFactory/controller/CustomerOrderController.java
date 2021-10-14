@@ -30,7 +30,7 @@ public class CustomerOrderController {
     }
 
     @DeleteMapping("/{orderId}")
-    public CustomerOrder delete(@PathVariable UUID orderId){
-        return service.delete(orderId);
+    public void delete(@PathVariable UUID orderId){
+         service.delete(orderId);
     }
 }

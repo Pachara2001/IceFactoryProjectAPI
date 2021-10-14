@@ -37,9 +37,8 @@ public class ProductService {
         return record;
     }
 
-    public Product delete(String name){
+    public void delete(String name){
         Product record = repository.findById(name).get();
         repository.deleteById(name);
-        return record;
     }
 }

@@ -35,8 +35,8 @@ public class StaffController {
     }
 
     @DeleteMapping("/{username}")
-    public Staff delete(@PathVariable String username) {
-        return service.delete(username);
+    public void delete(@PathVariable String username) {
+         service.delete(username);
     }
 
 }

@@ -45,10 +45,9 @@ public class StaffService {
         return record;
     }
 
-    public Staff delete(String username) {
+    public void delete(String username) {
         Staff record = repository.findById(username).get();
         repository.deleteById(username);
-        return record;
     }
 
 }

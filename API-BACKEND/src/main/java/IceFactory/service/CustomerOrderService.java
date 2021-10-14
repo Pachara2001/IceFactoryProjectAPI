@@ -30,9 +30,8 @@ public class CustomerOrderService {
         return record;
     }
 
-    public CustomerOrder delete(UUID id){
+    public void delete(UUID id){
         CustomerOrder record = repository.findById(id).get();
         repository.deleteById(id);
-        return record;
     }
 }

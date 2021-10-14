@@ -23,9 +23,8 @@ public class OrderItemService {
 
     public OrderItem getOrderItem(UUID id){ return repository.findById(id).get(); }
 
-    public OrderItem delete(UUID id){
+    public void delete(UUID id){
         OrderItem record = repository.findById(id).get();
         repository.deleteById(id);
-        return record;
     }
 }
