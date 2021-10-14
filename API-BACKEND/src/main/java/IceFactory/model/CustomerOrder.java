@@ -26,6 +26,7 @@ public class CustomerOrder {
     @OneToMany(mappedBy = "customerOrder")
     private List<OrderItem> orderItemList = new ArrayList<>();
     private String orderStatus = Status.PrepareProduct.toString();
+    private String orderDate;
 
     public UUID getOrderId() {
         return orderId;
@@ -57,5 +58,13 @@ public class CustomerOrder {
 
     public void setOrderStatus(String status) {
         this.orderStatus = status;
+    }
+
+    public String getOrderDate() {
+        return orderDate;
+    }
+
+    public void setOrderDate(String orderDate) {
+        this.orderDate = orderDate;
     }
 }
