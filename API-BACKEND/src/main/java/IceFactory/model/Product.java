@@ -18,11 +18,11 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private Set<OrderItem> items = new HashSet<>();
 
-    public String getpName() {
+    public String getPName() {
         return pName;
     }
 
-    public void setpName(String pName) {
+    public void setPName(String pName) {
         this.pName = pName;
     }
 
