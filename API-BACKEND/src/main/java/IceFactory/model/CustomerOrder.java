@@ -67,4 +67,8 @@ public class CustomerOrder {
     public void setOrderDate(String orderDate) {
         this.orderDate = orderDate;
     }
+
+    public Customer getCustomer() {return this.customer;}
+
+
 }

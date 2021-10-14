@@ -66,10 +66,6 @@ public class Customer {
         this.type = type;
     }
 
-    public Set<CustomerOrder> getOrders() {
-        return customerOrders;
-    }
-
     public void setOrders(Set<CustomerOrder> customerOrders) {
         this.customerOrders = customerOrders;
     }
