@@ -23,7 +23,7 @@ public class CustomerOrder {
     @ManyToOne
     private Staff staff;
 
-    @OneToMany(mappedBy = "customerOrder")
+    @OneToMany(mappedBy = "customerorder")
     private List<OrderItem> orderItemList = new ArrayList<>();
     private String orderStatus = Status.PrepareProduct.toString();
     private String orderDate;
