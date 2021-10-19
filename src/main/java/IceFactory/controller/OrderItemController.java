@@ -27,4 +27,9 @@ public class OrderItemController {
 
     @DeleteMapping("/{orderItemId}")
     public void delete(@PathVariable UUID orderItemId){  service.delete(orderItemId);}
+
+    @PutMapping("/{orderItemId}")
+    public OrderItem update(@PathVariable UUID orderItemId,@RequestBody OrderItem item){
+        return service.update(orderItemId,item);
+    }
 }

@@ -1,7 +1,6 @@
 package IceFactory.controller;
 
 import IceFactory.model.Customer;
-import IceFactory.model.Staff;
 import IceFactory.service.CustomerService;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;

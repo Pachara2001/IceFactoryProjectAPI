@@ -18,6 +18,7 @@ public class OrderItem {
     private int orderQuantity;
     private float price;
     private String pName;
+
     @ManyToOne
     private CustomerOrder customerOrder;
 

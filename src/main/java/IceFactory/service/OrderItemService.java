@@ -27,4 +27,12 @@ public class OrderItemService {
         OrderItem record = repository.findById(id).get();
         repository.deleteById(id);
     }
+
+    public OrderItem update(UUID id,OrderItem requestBody){
+        OrderItem record = repository.findById(id).get();
+        if(requestBody.getProduct()!=null) record.setProduct(requestBody.getProduct());
+        if(requestBody.getPrice()!=0) record.setPrice(requestBody.getPrice());
+        repository.saveAndFlush(record);
+        return record;
+    }
 }
