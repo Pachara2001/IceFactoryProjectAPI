@@ -6,6 +6,7 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
+@Table(name = "customerOrder")
 public class CustomerOrder {
     public enum Status{
         PrepareProduct,
@@ -22,6 +23,9 @@ public class CustomerOrder {
     private Customer customer;
     @ManyToOne
     private Staff staff;
+
+    @OneToOne(mappedBy = "customerOrder")
+    private Bill bill;
 
     @OneToMany(mappedBy = "customerOrder")
     private List<OrderItem> orderItemList = new ArrayList<>();
@@ -70,6 +74,10 @@ public class CustomerOrder {
 
     public Staff getStaff() {
         return staff;
+    }
+
+    public void setBill(Bill bill) {
+        this.bill = bill;
     }
 
     public Customer getCustomer() {return this.customer;}
