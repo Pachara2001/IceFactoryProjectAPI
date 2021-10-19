@@ -26,9 +26,7 @@ public class OrderItem {
     public Product getProduct() {
         return product;
     }
-    public CustomerOrder getCustomerOrder() {
-        return customerOrder;
-    }
+    
 
     public void setCustomerOrder(CustomerOrder customerOrder) {
         this.customerOrder = customerOrder;
