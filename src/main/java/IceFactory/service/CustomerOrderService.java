@@ -26,6 +26,7 @@ public class CustomerOrderService {
     public CustomerOrder update(UUID id, CustomerOrder requestBody){
         CustomerOrder record = repository.findById(id).get();
         record.setOrderStatus(requestBody.getOrderStatus());
+        if(requestBody.getOrderItemList()!=null) record.setOrderItemList(requestBody.getOrderItemList());
         repository.saveAndFlush(record);
         return record;
     }
