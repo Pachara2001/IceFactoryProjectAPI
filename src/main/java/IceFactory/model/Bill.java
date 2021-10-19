@@ -15,6 +15,7 @@ public class Bill {
     private UUID billId;
     private String createDate;
     private float totalPrice;
+
     @OneToOne
     private CustomerOrder order;
 

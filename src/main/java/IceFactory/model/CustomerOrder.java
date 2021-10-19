@@ -23,7 +23,7 @@ public class CustomerOrder {
     @ManyToOne
     private Staff staff;
 
-    @OneToOne(mappedBy = "customerOrder")
+    @OneToOne
     private Bill bill;
 
     @OneToMany(mappedBy = "customerOrder")
@@ -75,9 +75,9 @@ public class CustomerOrder {
         return staff;
     }
 
-    public void setBill(Bill bill) {
-        this.bill = bill;
-    }
+//    public void setBill(Bill bill) {
+//        this.bill = bill;
+//    }
 
     public Customer getCustomer() {return this.customer;}
 
