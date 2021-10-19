@@ -21,11 +21,24 @@ public class OrderItem {
     @ManyToOne
     private CustomerOrder customerOrder;
 
-    public String getpName() {
+
+    public Product getProduct() {
+        return product;
+    }
+
+    public CustomerOrder getCustomerOrder() {
+        return customerOrder;
+    }
+
+    public void setCustomerOrder(CustomerOrder customerOrder) {
+        this.customerOrder = customerOrder;
+    }
+
+    public String getPName() {
         return pName;
     }
 
-    public void setpName(String pName) {
+    public void setPName(String pName) {
         this.pName = pName;
     }
 
@@ -56,7 +69,6 @@ public class OrderItem {
     public void setPrice(float price) {
         this.price = price;
     }
-
 
 
     public void setOrder(CustomerOrder customerOrder) {

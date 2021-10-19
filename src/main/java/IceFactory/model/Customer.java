@@ -54,6 +54,10 @@ public class Customer {
         return phoneNumber;
     }
 
+    public void setCustomerOrders(Set<CustomerOrder> customerOrders) {
+        this.customerOrders = customerOrders;
+    }
+
     public void setPhoneNumber(String phoneNumber) {
         this.phoneNumber = phoneNumber;
     }
@@ -69,6 +73,5 @@ public class Customer {
     public void setOrders(Set<CustomerOrder> customerOrders) {
         this.customerOrders = customerOrders;
     }
-
 
 }

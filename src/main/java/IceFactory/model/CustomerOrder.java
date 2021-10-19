@@ -68,6 +68,10 @@ public class CustomerOrder {
         this.orderDate = orderDate;
     }
 
+    public Staff getStaff() {
+        return staff;
+    }
+
     public Customer getCustomer() {return this.customer;}
 
 

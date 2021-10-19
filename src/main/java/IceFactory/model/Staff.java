@@ -16,6 +16,7 @@ public class Staff extends Account {
     private Owner owner;
     @OneToMany
     private Set<CustomerOrder> customerOrders = new HashSet<>();
+
     public void setOwner(Owner owner) {
         this.owner = owner;
     }
@@ -35,6 +36,9 @@ public class Staff extends Account {
         this.lastName = lastName;
     }
 
+    public Owner getOwner() {
+        return owner;
+    }
     public String getDateTime() {
         return dateTime;
     }
@@ -57,10 +61,6 @@ public class Staff extends Account {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public Set<CustomerOrder> getOrders() {
-        return customerOrders;
     }
 
     public void setOrders(Set<CustomerOrder> customerOrders) {

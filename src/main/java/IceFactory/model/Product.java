@@ -18,6 +18,7 @@ public class Product {
     @OneToMany(mappedBy = "product")
     private Set<OrderItem> items = new HashSet<>();
 
+
     public String getPName() {
         return pName;
     }
@@ -48,10 +49,6 @@ public class Product {
 
     public void setPriceDelivery(float priceDelivery) {
         this.priceDelivery = priceDelivery;
-    }
-
-    public Set<OrderItem> getItems() {
-        return items;
     }
 
     public void setItems(Set<OrderItem> items) {
