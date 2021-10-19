@@ -6,7 +6,6 @@ import javax.persistence.*;
 import java.util.*;
 
 @Entity
-@Table(name = "customerOrder")
 public class CustomerOrder {
     public enum Status{
         PrepareProduct,

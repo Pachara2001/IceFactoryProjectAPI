@@ -36,7 +36,6 @@ public class CustomerService {
             record.setName(requestBody.getName());
         if(requestBody.getPhoneNumber()!=null)
             record.setPhoneNumber(requestBody.getPhoneNumber());
-
         repository.saveAndFlush(record);
         return record;
     }
