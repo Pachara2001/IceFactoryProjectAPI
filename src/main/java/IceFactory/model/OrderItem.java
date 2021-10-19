@@ -21,11 +21,11 @@ public class OrderItem {
     @ManyToOne
     private CustomerOrder customerOrder;
 
-    public String getPName() {
+    public String getpName() {
         return pName;
     }
 
-    public void setPName(String pName) {
+    public void setpName(String pName) {
         this.pName = pName;
     }
 
