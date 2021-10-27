@@ -15,20 +15,19 @@ public class CustomerOrder {
     @Id
     @GeneratedValue(generator = "UUID")
     @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "CHAR(36)")
+    @Column(columnDefinition = "CHAR(36)", name = "order_id")
     private UUID orderId;
 
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
     @ManyToOne
-    @JoinColumn(name = "staff_id")
     private Staff staff;
 
-    
+    @OneToOne
     private Bill bill;
 
-    @OneToMany(mappedBy = "customer_order")
+    @OneToMany(mappedBy = "customerOrder")
     private List<OrderItem> orderItemList = new ArrayList<>();
     private String orderStatus = Status.PrepareProduct.toString();
     private String orderDate;

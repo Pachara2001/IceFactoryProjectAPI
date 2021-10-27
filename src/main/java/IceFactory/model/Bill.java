@@ -11,7 +11,7 @@ public class Bill {
     @Id
     @GeneratedValue(generator = "UUID")
     @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "CHAR(36)")
+    @Column(columnDefinition = "CHAR(36)" , name = "bill_id")
     private UUID billId;
     private String createDate;
     private float totalPrice;

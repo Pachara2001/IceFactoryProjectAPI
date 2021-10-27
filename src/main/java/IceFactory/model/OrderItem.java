@@ -11,7 +11,7 @@ public class OrderItem {
     @Id
     @GeneratedValue(generator = "UUID")
     @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "CHAR(36)")
+    @Column(columnDefinition = "CHAR(36)" , name = "order_item_id")
     private UUID orderItemId;
 
     @ManyToOne

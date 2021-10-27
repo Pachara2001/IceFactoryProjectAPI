@@ -16,7 +16,7 @@ public class Customer {
     @Id
     @GeneratedValue(generator = "UUID")
     @Type(type = "org.hibernate.type.UUIDCharType")
-    @Column(columnDefinition = "CHAR(36)")
+    @Column(columnDefinition = "CHAR(36)",name = "customer_id")
     private UUID customerId;
     private String name;
     private String address;
