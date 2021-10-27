@@ -22,8 +22,6 @@ public class CustomerOrder {
     @JoinColumn(name = "customer_id")
     private Customer customer;
 
-//    @OneToOne(mappedBy = "customer_order")
-//    private Bill bill;
 
     @OneToMany(mappedBy = "customerOrder")
     private List<OrderItem> orderItemList = new ArrayList<>();
