@@ -17,6 +17,7 @@ public class Bill {
     private float totalPrice;
 
     @OneToOne
+    @JoinColumn(name = "order_id", referencedColumnName = "order_id")
     private CustomerOrder order;
 
 

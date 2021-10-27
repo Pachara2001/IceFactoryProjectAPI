@@ -19,14 +19,16 @@ public class CustomerOrder {
     private UUID orderId;
 
     @ManyToOne
+    @JoinColumn(name = "customer_id")
     private Customer customer;
     @ManyToOne
+    @JoinColumn(name = "staff_id")
     private Staff staff;
 
-    @OneToOne
+    @OneToOne(mappedBy ="customer_order")
     private Bill bill;
 
-    @OneToMany(mappedBy = "customerOrder")
+    @OneToMany(mappedBy = "customer_order")
     private List<OrderItem> orderItemList = new ArrayList<>();
     private String orderStatus = Status.PrepareProduct.toString();
     private String orderDate;

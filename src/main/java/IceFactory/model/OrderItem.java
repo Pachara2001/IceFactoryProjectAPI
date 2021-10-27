@@ -13,13 +13,15 @@ public class OrderItem {
     @Type(type = "org.hibernate.type.UUIDCharType")
     @Column(columnDefinition = "CHAR(36)")
     private UUID orderItemId;
+
     @ManyToOne
+    @JoinColumn(name="pName", nullable=false)
     private Product product;
     private int orderQuantity;
     private float price;
-    private String pName;
 
     @ManyToOne
+    @JoinColumn(name="order_id", nullable=false)
     private CustomerOrder customerOrder;
 
 
@@ -30,14 +32,6 @@ public class OrderItem {
 
     public void setCustomerOrder(CustomerOrder customerOrder) {
         this.customerOrder = customerOrder;
-    }
-
-    public String getPName() {
-        return pName;
-    }
-
-    public void setPName(String pName) {
-        this.pName = pName;
     }
 
     public UUID getOrderItemId() {

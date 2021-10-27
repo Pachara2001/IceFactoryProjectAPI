@@ -13,6 +13,7 @@ public class Staff extends Account {
     private String phoneNumber;
     private String address;
     @ManyToOne
+    @JoinColumn(name = "username", nullable=false)
     private Owner owner;
     @OneToMany
     private Set<CustomerOrder> customerOrders = new HashSet<>();
