@@ -21,11 +21,9 @@ public class CustomerOrder {
     @ManyToOne
     @JoinColumn(name = "customer_id")
     private Customer customer;
-    @ManyToOne
-    private Staff staff;
 
-    @OneToOne
-    private Bill bill;
+//    @OneToOne(mappedBy = "customer_order")
+//    private Bill bill;
 
     @OneToMany(mappedBy = "customerOrder")
     private List<OrderItem> orderItemList = new ArrayList<>();
@@ -42,10 +40,6 @@ public class CustomerOrder {
 
     public void setCustomer(Customer customer) {
         this.customer = customer;
-    }
-
-    public void setStaff(Staff staff) {
-        this.staff = staff;
     }
 
     public List<OrderItem> getOrderItemList() {
@@ -72,13 +66,9 @@ public class CustomerOrder {
         this.orderDate = orderDate;
     }
 
-    public Staff getStaff() {
-        return staff;
-    }
-
-    public void setBill(Bill bill) {
-        this.bill = bill;
-    }
+//    public void setBill(Bill bill) {
+//        this.bill = bill;
+//    }
 
     public Customer getCustomer() {return this.customer;}
 

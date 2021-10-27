@@ -14,8 +14,6 @@ public class Staff extends Account {
     private String address;
     @ManyToOne
     private Owner owner;
-    @OneToMany
-    private Set<CustomerOrder> customerOrders = new HashSet<>();
 
     public void setOwner(Owner owner) {
         this.owner = owner;
@@ -61,10 +59,6 @@ public class Staff extends Account {
 
     public void setAddress(String address) {
         this.address = address;
-    }
-
-    public void setOrders(Set<CustomerOrder> customerOrders) {
-        this.customerOrders = customerOrders;
     }
 
 
