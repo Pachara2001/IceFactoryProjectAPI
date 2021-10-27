@@ -25,7 +25,7 @@ public class CustomerOrder {
     @JoinColumn(name = "staff_id")
     private Staff staff;
 
-    @OneToOne(mappedBy ="customer_order")
+    
     private Bill bill;
 
     @OneToMany(mappedBy = "customer_order")
