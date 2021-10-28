@@ -4,12 +4,12 @@ pipeline {
      }
       environment {
      
-          DATABASE_URL = 'postgres://armbxehckruaxn:e5c4ab104fb70d1b2dbaaecaf93ddacd9da2d68aa499b91d9a3d5ebf6c09819a@ec2-52-205-45-219.compute-1.amazonaws.com:5432/dfg65d0u5tej0j'
-          DB_DB = 'dfg65d0u5tej0j'
-          DB_HOST = 'ec2-52-205-45-219.compute-1.amazonaws.com'
-          DB_PASSWORD = 'e5c4ab104fb70d1b2dbaaecaf93ddacd9da2d68aa499b91d9a3d5ebf6c09819a'
+          DATABASE_URL = 'postgres://bsrpkeilwqtcve:65ab685b62b45fe5330d75dea53f5c8e26ac957fb5e0f678cadc3b9697a6b76b@ec2-107-23-135-132.compute-1.amazonaws.com:5432/d6gc1vhaafklo2'
+          DB_DB = 'd6gc1vhaafklo2'
+          DB_HOST = 'ec2-107-23-135-132.compute-1.amazonaws.com'
+          DB_PASSWORD = '65ab685b62b45fe5330d75dea53f5c8e26ac957fb5e0f678cadc3b9697a6b76b'
           DB_PORT = '5432'
-          DB_USERNAME = 'armbxehckruaxn'
+          DB_USERNAME = 'bsrpkeilwqtcve'
       }
      stages {
           stage('Source') {
