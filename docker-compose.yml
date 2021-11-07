@@ -1,0 +1,39 @@
+version: '3'
+
+services:
+
+  docker-mysql:
+    container_name: docker-mysql
+    image: mysql:latest
+    environment:
+      MYSQL_DATABASE: iceFactory
+      MYSQL_ROOT_PASSWORD: abc123
+    expose:
+      - 3306
+    ports:
+      - 3307:3306
+    networks:
+      - ice-factory-network
+    restart: always
+
+  iceFactory-api:
+    restart: on-failure
+    container_name: ice-factory-api
+    build:
+      context: .
+      dockerfile: ice-factory-api.dockerfile
+    image: ice-factory-api:latest
+    expose:
+      - 8090
+    ports:
+      - 8090:8090
+    networks:
+      - ice-factory-network
+    environment:
+      SPRING_DATASOURCE_URL: jdbc:mysql://docker-mysql:3306/iceFactory
+    depends_on:
+      - docker-mysql
+
+networks:
+  ice-factory-network:
+    driver: bridge
