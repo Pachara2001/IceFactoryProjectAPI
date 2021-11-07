@@ -8,3 +8,5 @@ This project is for System Analysis and Software Engineering class. Work with th
 docker-compose up -d
 ```
 in directory where both ice-factory-api.dockerfile and docker-compose.yml present .
+
+- need to add owner and product data manually in database the rest can add from application https://github.com/SunWPS/IceFactoryProject (Thai language.)
